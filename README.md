@@ -15,11 +15,28 @@ SpringBoot , uniapp ,Vue .MySql
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/221342_318d976b_7463838.jpeg "初步功能设想.jpg")
 
 ### PC端数据可视化
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/220820_ee7193e0_7463838.jpeg "LZH_create.jpg")
+
+
 
 ### PC 端 疫情题库
 
+#### 刷题模块一
+
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/220303_68453620_7463838.png "图片.png")
+
+#### 刷题模块二
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/221014_6f8a702a_7463838.png "Snipaste_2021-02-22_22-06-04.png")
+
+#### 数据库 物理模型
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/220935_109428fd_7463838.png "Snipaste_2021-02-22_22-05-25.png")
+
+#### 题库导出
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/221047_da1e00dd_7463838.png "Snipaste_2021-02-22_22-06-22.png")
 
 ### 移动端界面
 
