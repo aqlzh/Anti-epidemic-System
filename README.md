@@ -17,6 +17,9 @@ SpringBoot , uniapp ,Vue .MySql
 ### PC端数据可视化
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/220820_ee7193e0_7463838.jpeg "LZH_create.jpg")
 
+### PC 端 疫情题库
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/220303_68453620_7463838.png "图片.png")
 
 ### 移动端界面
 
