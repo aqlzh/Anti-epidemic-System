@@ -62,3 +62,7 @@ SpringBoot , uniapp ,Vue .MySql
 #### 我的界面
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/232102_856dfbe8_7463838.png "5.png")
+
+
+
+### PC 端信息提交
