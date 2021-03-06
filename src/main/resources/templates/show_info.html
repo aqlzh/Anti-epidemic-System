@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <title>展示信息</title>
+    <script type="text/javascript" src="../jquery/jquery-3.5.1.min.js"></script>
+    <script th:inline="javascript"></script>
+</head>
+<body>
+    <div>
+        <p th:text="'用户姓名:' + ${member.name}"></p>
+        <p th:text="'用户年龄:' + ${member.age}"></p>
+        <h1>这是一个简单的测试页面</h1>
+    </div>
+    <div>
+        <h1>看看能不能显示</h1>
+    </div>
+    <div>
+        <h5>查询结果如下</h5>
+        <table border="solid" cellspacing="0">
+            <tr>
+                <th width="100">姓名</th>
+                <th width="100">性别</th>
+                <th width="100">年龄</th>
+                <th width="100">身份证号码</th>
+                <th>身份证类型</th>
+                <th>家庭地址</th>
+                <th>社区是否存在病例</th>
+                <th>电话号码</th>
+            </tr>
+            <tr>
+                <td th:text="${member.name}"></td>
+                <td th:text="${member.sex}"></td>
+                <td th:text="${member.age}"></td>
+                <td th:text="${member.id_card}"></td>
+                <td th:text="${member.id_type}"></td>
+                <td th:text="${member.adress}"></td>
+                <td th:text="${member.inNative}"></td>
+                <td th:text="${member.phone}"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

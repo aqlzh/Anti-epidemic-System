@@ -1,0 +1,116 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+
+#数据库配置
+spring:
+  application:
+    name: epi
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/anti_epidemic_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      username: root
+      password: longfire
+      ######### 连接池配置 #########
+      #连接池建立时创建的初始化连接数
+      initial-size: 5
+      #连接池中最大的活跃连接数
+      max-active: 20
+      #连接池中最小的活跃连接数
+      min-idle: 5
+      #配置获取连接等待超时的时间
+      max-wait: 60000
+      #打开PSCache，并且指定每个连接上PSCache的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: SELECT 1
+      validation-query-timeout: 30000
+      #是否在获得连接后检测其可用性
+      test-on-borrow: false
+      #是否在连接放回连接池后检测其可用性
+      test-on-return: false
+      #是否在连接空闲一段时间后检测其可用性
+      test-while-idle: true
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      #配置监控统计拦截的filters，去掉后监控界面sql无法统计，‘wall'用于防火墙
+      filters: stat,wall
+      # WebStatFilter配置，说明请参考Druid Wiki，配置_配置WebStatFilter
+      # 是否启用StatFilter默认值true
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+        session-stat-enable: false
+        session-stat-max-count: 1000
+        principal-cookie-name: admin
+        principal-session-name: admin
+        profile-enable: true
+      # 根据配置中的url-pattern来访问内置监控页面，如果是上面的配置，内置监控页面的首页是/druid/index.html
+      # http://localhost:8081/druid
+      stat-view-servlet:
+        url-pattern: /druid/*  # 监控页面访问路径
+        # 允许清空统计数据
+        reset-enable: true
+        login-username: admin
+        login-password: 123456
+  redis:
+    host: localhost
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 30
+        min-idle: 1
+        max-wait: PT10S
+    timeout: PT10S
+
+  thymeleaf:
+    #关闭Thymeleaf 的缓存开发过程中无需重启
+    cache: false
+    #关闭Thymeleaf 的缓存开发过程中无需重启
+    encoding: utf-8
+    mode: HTML5
+    #设置thymeleaf页面的后缀
+    suffix: .html
+    #设置thymeleaf页面的存储路径
+#    prefix:
+#      classpath: /templates/
+    #servlet:
+     # content-type: text/html
+  ##thymeleaf页面模板配置
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  jpa:
+    open-in-view: false
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+#日志配置
+logging:
+  file:
+    path: D://Epidemic/epi/logs/${spring.application.name}.log
+  level:
+    com.example.epi: debug
+#mybatis 配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#swagger 开关
+swagger:
+  enable: true
+#token
+token:
+  #token到期时间5分钟
+  expire-time: 300000
+  #refreshToken到期时间30分钟
+  refresh-expire-time: 1800000
+  #密钥盐
+  token-secret: eqglxtzms**3nkjnj??

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <style type="text/css">
+        .form{
+            width: 30%;
+            height :50%;
+            padding: 40px;
+            margin : 200px;
+            background-color: chartreuse;
+        }
+    </style>
+    <script type="text/javascript">
+        function login() {
+            /*var uname = document.getElementById("uname").value;
+            if(uname!=null && uname.trim()!="" ){
+                document.loginForm.submit();
+            }*/
+            const uname = document.getElementById("uname").value;
+            const password = document.getElementById("password").value;
+            document.ajax({
+                type: "post",
+                dataType : "JSON",
+                url:"/LoginServelt",
+                data:{"uname":uname,"password":password},
+                success : function(data) {
+                    if("admin".equals(data.uname)){
+                        window.location.href="index.html";
+                    }else {
+                        window.location.href="login.html";
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div class="form" style="height: 30%" >
+        <form method="post" action="LoginServelt" id="loginForm" name="loginForm">
+            <p>姓名：<input name="uname" id="uname" class="text" type="text" placeholder="请输入姓名" value="admin"></p><br>
+            <p>密码：<input name="password" id="password" class="password-field" type="password" placeholder="请输入密码" value="12345"></p><br>
+            <input type="button" value="提交" onclick="login()">
+        </form>
+
+    </div>
+
+</body>
+</html>

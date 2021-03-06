@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>采集信息</title>
+    <style type="text/css">
+        .info{
+            width: 50%;
+            height: 500px;
+            padding: 40px;
+            margin : 200px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script type="text/javascript" src="jquery/jquery-3.5.1.min.js" ></script>
+    <script type="text/javascript">
+       window.onload = function() {
+           const nowDate = new Date();
+           const str = nowDate.getFullYear() + "-" + (nowDate.getMonth() + 1) + "-" + nowDate.getDate() + "  " + nowDate.getHours() + ":" + nowDate.getMinutes() + ":" + nowDate.getSeconds();
+           document.getElementById("regtime").value=str;
+       }
+       function showInfo() {
+           const fields = $("#form").serializeArray();
+           const obj = {};//声明一个对象
+            $.each(fields, function(index, field){
+                obj[field.name] = field.value;//通过变量，将属性值，属性一起放到对象中
+            })
+            $.ajax({
+                type: "post",
+                url: "/admin/addEpidemicInfo",
+                //async : true,
+                contentType : 'application/json;charset=UTF-8',
+                dataType: 'JSON',
+                data: JSON.stringify(obj), //将对象转为json字符串
+                //clearForm: true,        //成功提交后，清除所有表单元素的值
+                //resetForm: true,        //成功提交后，重置所有表单元素的值
+                //cache:false,
+                success: function () {
+                    alert("发送成功");
+                    alert(JSON.stringify(data));
+                },
+                error: function () {
+                    //alert("发送失败");
+                    //alert(JSON.stringify(obj));
+                    //window.location.href="http://localhost:8080/success.html";
+
+                }
+            })
+       }
+
+
+    </script>
+
+</head>
+<body>
+    <div id="showForm">
+       <form method="post" action="/admin/addEpidemicInfo" class="info" id="form">
+           <p>姓名：<label><input type="text" name="name" required="required" pattern="[\u4e00-\u9fa5]{2,4}" placeholder="请输入姓名" oninvalid="setCustomValidity('真实姓名必须是中文，且长度不小于2，不大于4')" oninput="setCustomValidity('')" value="张三"></label></p>
+           <p>  年龄：<input id="age" name="age" type="number" placeholder="请输入年龄" required value="21"></p>
+           <p>  性别：<input id="gender" name="gender" type="radio" value="男" checked>男
+           <input name="gender" type="radio" value="女">女</p>
+           <p>  身份：<input  name="identy" type="radio" value="student" checked>学生
+           <input name="identy" type="radio" value="teacher">教职工</p>
+           <p>  体温：<input id="temp" name="temp" type="number" placeholder="请输入体温" required value="36"> ℃</p>
+            <p>是否去过疫情高风险地区：<input name="inNative" type="radio" checked>否
+            <input name="inNative" type="radio">是</p>
+           <p>  家庭地址： <input id="adress" name="adress" type="text" placeholder="家庭地址" required value="江西省赣州市于都县"></p>
+           <input type="text" name="regtime" id="regtime" value="" style="display: none">
+           <label>身份证类型：</label>
+           <select name="id_type">
+               <option>中华人民共和国身份证</option>
+               <option selected="selected">中华人民共和国身份证</option>
+               <option >中华人民共和国临时身份证</option>
+               <option >外国居民身份证</option>
+           </select>
+           <p>身份证号：<label><input type="text" name="id_card" required="required"pattern="^[1-9]\d{5}[1-9]\d{3}((0[1-9])|(1[0-2]))((0[1-9])|([1-2]\d)|(3[0-1]))((\d{4})|(\d{3}[Xx]))$" placeholder="请输入身份证号" oninvalid="setCustomValidity('请输入正确的身份证号码')" maxlength="18" oninput="setCustomValidity('')" value="360731200011215658"></label></p>
+           <p>手机号码：<label><input type="tel" name="phone" required="required" maxlength="11" pattern="^(0|86|17951)?1[0-9]{10}" placeholder="请输入手机号" oninvalid="setCustomValidity('请输入11位手机号码')" oninput="setCustomValidity('')" value="18470778808"></label></p>
+            <p><input type="button" name="submit" value="提交" onclick="showInfo()"></p>
+       </form>
+    </div>
+
+</body>
+</html>
