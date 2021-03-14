@@ -51,7 +51,7 @@ spring:
         principal-cookie-name: admin
         principal-session-name: admin
         profile-enable: true
-      # 根据配置中的url-pattern来访问内置监控页面，如果是上面的配置，内置监控页面的首页是/druid/index.html
+      # 根据配置中的url-pattern来访问内置监控页面，如果是上面的配置，内置监控页面的首页是/druid/AdminMainPage.html
       # http://localhost:8081/druid
       stat-view-servlet:
         url-pattern: /druid/*  # 监控页面访问路径
@@ -110,7 +110,10 @@ swagger:
 token:
   #token到期时间5分钟
   expire-time: 300000
-  #refreshToken到期时间30分钟
+  #refreshToken到期时间30分钟 pc端
   refresh-expire-time: 1800000
+  #app端 5天
+  refresh-expire-app-time: 432000000
   #密钥盐
   token-secret: eqglxtzms**3nkjnj??
+  issuer: zmsjwt

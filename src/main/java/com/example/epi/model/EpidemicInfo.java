@@ -49,5 +49,9 @@ public class EpidemicInfo implements Serializable {
     @Column(name = "adress")
     private String adress;
 
+    @Basic
+    @Column(name = "temp")
+    private double temp;
+
 
 }

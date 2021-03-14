@@ -4,4 +4,6 @@ import com.example.epi.model.User;
 
 public interface UserService {
     User getUserInfo(String username, String password);
+
+    User getUser(int userId, String userName);
 }

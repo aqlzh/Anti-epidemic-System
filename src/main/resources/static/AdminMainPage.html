@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>疫情管理界面</title>
+    <script type="text/javascript" src="/static/jquery/jquery-3.5.1.min.js" ></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<h1>这是管理员的管理主页面,欢迎您！</h1>
+<form th:id="form_search" th:action="@{/admin/findByName}" method="post">
+    <div id="box">
+        <label for="search"></label><input id="search" type="search" name="name" placeholder="请输入关键字">
+        <input type="submit" value="搜索">
+    </div>
+</form>
+<div>
+    <form action="/admin/queryAll">
+        <input type="submit" value="查询所有">
+    </form>
+    <a href="/GetInfo.html">添加用户</a>
+</div>
+</body>
+</html>

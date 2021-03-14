@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="shortcut icon" href="../resources/favicon.ico" th:href="@{/static/favicon.ico}"/>
+<head>
+    <meta charset="UTF-8">
+    <title>删除学生信息</title>
+
+    <!---->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!---->
+
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="/jquery-3.2.1.js"></script>
+
+    <!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <script src="/js/bootstrap.bundle.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <!--这是顶部信息栏-->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <span></span>你好，
+            <span>你的权限是管理者</span>
+            <!--这里是面包屑导航-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a th:href="@{/Dele/welcome}">添加学生信息</a></li>
+                <li class="breadcrumb-item"> 删除学生信息</li>
+            </ol>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-bordered">
+                <tr>
+                    <td>学生id</td>
+                    <td>学生姓名</td>
+                    <td>学生班级</td>
+                    <td>学生体温</td>
+                </tr>
+
+                <tr th:each="list : ${studentList}">
+                    <td th:text="${list.getUserid()}"></td>
+                    <td th:text="${list.getUsername()}"></td>
+                    <td th:text="${list.getTemperature()}"></td>
+                    <td th:text="${list.getClas()}"></td>
+
+                    <td>
+                        <a th:href="@{/deleteUser(id=${list.userid})}">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a th:href="@{/Dele/{pageNum}(pageNum=1)}">首页</a>
+                    </td>
+                    <td th:if="${pageNum}!=1">
+                        <a th:href="@{/Dele/{pageNum}(pageNum=${pageNum}-1)}">上一页</a>
+                    </td>
+                    <td th:if="${pageNum}!=${totalPage}">
+                        <a th:href="@{/Dele/{pageNum}(pageNum=${pageNum}+1)}">下一页</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/Dele/{pageNum}(pageNum=${totalPage})}">尾页</a>
+                    </td>
+                    <td>
+                        第<span th:text="${pageNum}"></span>页/<span th:text="${totalPage}"></span>页
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

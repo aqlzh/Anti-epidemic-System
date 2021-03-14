@@ -21,7 +21,7 @@ public class LoginServelt extends HttpServlet {
         String uname = req.getParameter("uname");
         if("admin".equals(uname)){
             req.getSession().setAttribute("user",uname);
-            resp.sendRedirect("index.html");
+            resp.sendRedirect("AdminMainPage.html");
         }else {
             resp.sendRedirect("login.html");
         }
@@ -39,7 +39,7 @@ public class LoginServelt extends HttpServlet {
         String uname = req.getParameter("uname");
         if("admin".equals(uname)){
             req.getSession().setAttribute("user",uname);
-            resp.sendRedirect("index.html");
+            resp.sendRedirect("AdminMainPage.html");
         }else {
             resp.sendRedirect("login.html");
         }

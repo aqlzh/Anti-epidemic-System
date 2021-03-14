@@ -32,7 +32,7 @@ public class TokenUtil {
      * @param currentTime
      * @return
      */
-    public String createJWT(Long userId, String userName, Long currentTime) {
+    public String createJWT(Integer userId, String userName, Long currentTime) {
         String token = null;
         Date currentDate = new Date(currentTime);
         Claims claims = Jwts.claims();

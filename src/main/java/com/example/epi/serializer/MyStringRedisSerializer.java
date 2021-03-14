@@ -1,4 +1,4 @@
-package com.example.epi.serializer;
+package com.example.epi.serializer;/*package com.example.epi.serializer;
 
 import com.alibaba.fastjson.JSON;
 import io.jsonwebtoken.lang.Assert;
@@ -47,4 +47,4 @@ public class MyStringRedisSerializer implements RedisSerializer<Object> {
         ISO_8859_1 = new StringRedisSerializer(StandardCharsets.ISO_8859_1);
         UTF_8 = new StringRedisSerializer(StandardCharsets.UTF_8);
     }
-}
+}*/

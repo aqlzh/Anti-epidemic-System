@@ -28,7 +28,6 @@ public class SwaggerConfig {
      * apiInfo() 增加API相关信息
      * 通过select()函数返回一个ApiSelectorBuilder实例,用来控制哪些接口暴露给Swagger来展现，
      * 本项目采用指定扫描的包路径来定义指定要建立API的目录。
-     * @return
      */
     @Bean
     public Docket createDocket() {
@@ -44,7 +43,6 @@ public class SwaggerConfig {
 
     /**
      * API相关信息
-     * @return
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("疫情项目后台管理系统")
@@ -56,7 +54,6 @@ public class SwaggerConfig {
 
     /**
      * 在header中添加token，为了在用swagger 测试接口的时候添加头部信息
-     * @return
      */
     private List<Parameter> setHeaderToken() {
         List<Parameter> parameters = new ArrayList<>();

@@ -8,8 +8,10 @@ import org.springframework.stereotype.Component;
 public class Token {
 
     private long expireTime;   //token到期时间
-    private long refreshExpireTime;   //refreshtoken到期时间
+    private long refreshExpireTime;   //pc端 refreshToken到期时间
+    private long refreshExpireAppTime; //app refreshToken到期时间
     private String tokenSecret;    //密钥盐
+    private String issuer; //发行人
 
     public long getExpireTime() {
         return expireTime;
@@ -35,12 +37,19 @@ public class Token {
         this.tokenSecret = tokenSecret;
     }
 
-    @Override
-    public String toString() {
-        return "Token{" +
-                "expireTime=" + expireTime +
-                ", refreshExpireTime=" + refreshExpireTime +
-                ", tokenSecret='" + tokenSecret + '\'' +
-                '}';
+    public long getRefreshExpireAppTime() {
+        return refreshExpireAppTime;
+    }
+
+    public void setRefreshExpireAppTime(long refreshExpireAppTime) {
+        this.refreshExpireAppTime = refreshExpireAppTime;
+    }
+
+    public String getIssuer() {
+        return issuer;
+    }
+
+    public void setIssuer(String issuer) {
+        this.issuer = issuer;
     }
 }
