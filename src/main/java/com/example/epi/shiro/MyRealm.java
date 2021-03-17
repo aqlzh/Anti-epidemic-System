@@ -1,6 +1,7 @@
 package com.example.epi.shiro;
 
 import com.example.epi.util.JwtUtil;
+import io.jsonwebtoken.Claims;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -20,6 +21,7 @@ public class MyRealm extends AuthorizingRealm {
     public MyRealm(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
+
     @Override
     public boolean supports(AuthenticationToken token) {
         return token instanceof JWTToken;
@@ -32,10 +34,16 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
         System.out.println("--------------doGetAuthorizationInfo----------------");
         String token = (String) principalCollection.getPrimaryPrincipal();
-        System.out.println("token-----------:"+token);
+        //获取claims中的role
+        String role = null;
+        Claims claims = jwtUtil.getClaimsFromToken(token);
+        if (claims != null && !claims.isEmpty()) {
+            //claims 不为空时，获取角色 role
+            role = (String) claims.get("role");
+        }
+
         SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-        System.out.println("--------------dad_______________");
-        simpleAuthorizationInfo.addRole("admin");
+        simpleAuthorizationInfo.addRole(role);
         //查询数据库，获取权限信息
         return simpleAuthorizationInfo;
     }
@@ -48,22 +56,23 @@ public class MyRealm extends AuthorizingRealm {
         System.out.println("------------doGetAuthenticationInfo----------------");
         JWTToken jwtToken = (JWTToken) authenticationToken;
         String token = (String) jwtToken.getPrincipal();
-        System.out.println(token);
 
         //获取用户id和用户名
-        Integer userId = jwtUtil.getUserId(token);
-        System.out.println("userId:-------"+userId);
-        String userName = jwtUtil.getUserName(token);
-        System.out.println("userName------------:"+userName);
-        if (userId == null || userName == null) {
-            //令牌无效
-            System.out.println("---------令牌无效---------");
-            throw new AuthenticationException("token invalid");
+        Claims claimsFromToken = jwtUtil.getClaimsFromToken(token);
+        if (claimsFromToken != null && !claimsFromToken.isEmpty()) {
+            //claimsFromToken 不为null
+            Integer userId = (Integer) claimsFromToken.get("id");
+            System.out.println("userId:-------"+userId);
+            String userName = (String) claimsFromToken.get("user");
+            System.out.println("userName------------:"+userName);
+
+            if (userId == null || userName == null) {
+                //令牌无效
+                System.out.println("---------令牌无效---------");
+                throw new AuthenticationException("token invalid");
+            }
         }
-        if (!jwtUtil.validateToken(token)) {
-            System.out.println("----------------用户名或密码错误-------------");
-            throw new AuthenticationException("Username or password error");
-        }
+
         return new SimpleAuthenticationInfo(token, token, MyRealm.class.getName());
     }
 }

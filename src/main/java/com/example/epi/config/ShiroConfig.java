@@ -70,10 +70,9 @@ public class ShiroConfig {
          * http://shiro.apache.org/web.html#urls-
          */
         Map<String, String> filterRuleMap = new HashMap<>();
-      /*  // 所有请求通过我们自己的JWT Filter
+        // 所有请求通过我们自己的JWT Filter
         filterRuleMap.put("/", "anon");
         filterRuleMap.put("/doLogin", "anon");
-        filterRuleMap.put("/welcome", "anno");
 
         //放行swagger
         filterRuleMap.put("/swagger-ui.html", "anon");
@@ -86,9 +85,17 @@ public class ShiroConfig {
         filterRuleMap.put("/druid/**","anon");
         //filterRuleMap.put("/favicon.ico","anon");
 
-        filterRuleMap.put("/**", "jwtFilter");
+        //放行静态资源
+        filterRuleMap.put("/static/**", "anon");
+        filterRuleMap.put("*.js", "anon");
+        filterRuleMap.put("*.css", "anon");
+        filterRuleMap.put("/css/**", "anon");
+        filterRuleMap.put("/js/**", "anon");
+        filterRuleMap.put("/images/**", "anon");
+
+        //filterRuleMap.put("/**", "jwtFilter");
         // 访问401和404页面不通过我们的Filter
-        filterRuleMap.put("/401", "anon");*/
+        filterRuleMap.put("/401", "anon");
         factoryBean.setFilterChainDefinitionMap(filterRuleMap);
         return factoryBean;
     }

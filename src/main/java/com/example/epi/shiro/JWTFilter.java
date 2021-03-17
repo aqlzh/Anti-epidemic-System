@@ -3,6 +3,7 @@ package com.example.epi.shiro;
 import com.example.epi.constants.Constant;
 import com.example.epi.util.JwtUtil;
 import com.example.epi.util.RedisUtil;
+import io.jsonwebtoken.Claims;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.subject.Subject;
@@ -61,30 +62,33 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
         //如果accessToken不为空，且token验证为true，则需要登录
         if (accessToken != null && !accessToken.isEmpty()) {
             System.out.println("需要登录");
+            Claims claims = jwtUtil.getClaimsFromToken(accessToken);
+            System.out.println("-------------------------------------------"+claims);
+            if (claims != null && !claims.isEmpty()) {
+                //获取accessToken中的userId，与预先设置常量组合形成 key
+                //claims.get("i")      返回值：null
+                Integer userId = (Integer) claims.get("id");
+                if (userId != null) {
+                    String key = Constant.JWT_REFRESH_KEY + userId;
+                    //校验令牌，claims非空，判断token是否过期，若未过期
+                    if (!jwtUtil.isTokenExpired(claims)) {
+                        //判断redis数据库中是否存 key 对应的缓存信息，若不存在则返回false
 
-            //获取accessToken中的userId，与预先设置常量组合形成 key
-            Integer userId = jwtUtil.getUserId(accessToken);
-            String key = Constant.JWT_REFRESH_KEY + userId;
-
-            //校验令牌，判断claims是否为空及token是否过期，若非空且未过期
-            if (jwtUtil.validateToken(accessToken)) {
-                //判断redis数据库中是否存 key 对应的缓存信息，若不存在则返回false
-
-                if (isRefresh(key, accessToken)) {
-                    //刷新token并返回true，待完成
-                    //----------刷新-------------
-                    refreshTokens(accessToken, key, (HttpServletResponse) response);
-                    return true;
+                        if (isRefresh(key, accessToken)) {
+                            //刷新token并返回true，待完成
+                            //----------刷新-------------
+                            refreshTokens(accessToken, key, (HttpServletResponse) response);
+                            return true;
+                        }
+                    } else {
+                        //token过期，从redis中获取缓存token，进行判断，若redisToken未过期，则对token及redisToken进行刷新，刷新成功返回true
+                        if (isRefresh(key, accessToken)) {
+                            System.out.println("这是刷新token的方法");
+                            refreshTokens(accessToken, key, (HttpServletResponse) response);
+                            return true;
+                        }
+                    }
                 }
-                return false;
-            } else if (jwtUtil.getClaimsFromToken(accessToken) != null && jwtUtil.isTokenExpired(accessToken)) {
-                //token过期，从redis中获取缓存token，进行判断，若redisToken未过期，则对token及redisToken进行刷新，刷新成功返回true
-                if (isRefresh(key, accessToken)) {
-                    System.out.println("这是刷新token的方法");
-                    refreshTokens(accessToken, key, (HttpServletResponse) response);
-                    return true;
-                }
-                return false;
             }
         } else {
             System.out.println("------token为空，返回login页面");
@@ -145,8 +149,6 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     protected AuthenticationToken createToken(ServletRequest request, ServletResponse response) {
         System.out.println("------------createToken-----------");
         String jwtToken = this.getAuthzHeader(request);
-        System.out.println("是否覆盖-----"+jwtUtil.getClaimsFromToken(jwtToken));
-        System.out.println(jwtToken);
         return new JWTToken(jwtToken);
     }
 

@@ -89,6 +89,8 @@ public class JwtUtil {
                     .getBody();
         } catch (ExpiredJwtException e) {
             claims = e.getClaims();
+        } catch (Exception e) {
+            claims = null;
         }
         return claims;
     }
@@ -124,9 +126,8 @@ public class JwtUtil {
     /**
      * 验证token 是否过期
      */
-    public Boolean isTokenExpired(String token) {
+    public Boolean isTokenExpired(Claims claims) {
         try {
-            Claims claims = getClaimsFromToken(token);
             Date expiration = claims.getExpiration();
             return expiration.before(new Date());
         } catch (Exception e) {
@@ -138,10 +139,10 @@ public class JwtUtil {
     /**
      * 校验令牌
      */
-    public Boolean validateToken(String token) {
+    /*public Boolean validateToken(String token) {
         Claims claims = getClaimsFromToken(token);
         return (null != claims && !isTokenExpired(token));
-    }
+    }*/
 
     /**
      * 刷新token
