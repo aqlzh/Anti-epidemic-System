@@ -54,23 +54,23 @@
           newsid: 0
         }, {
           id: "tab02",
-          name: '大公司',
+          name: '党史学习',
           newsid: 23
         }, {
           id: "tab03",
-          name: '内容',
+          name: '抗疫',
           newsid: 223
         }, {
           id: "tab04",
-          name: '消费',
+          name: '疫情经济',
           newsid: 221
         }, {
           id: "tab05",
-          name: '娱乐',
+          name: '疫情学习',
           newsid: 225
         }, {
           id: "tab06",
-          name: '区块链',
+          name: '疫情信息',
           newsid: 208
         }],
         tabIndex: 0,

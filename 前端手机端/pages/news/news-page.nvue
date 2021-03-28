@@ -115,6 +115,7 @@
         uni.request({
           // url: this.$host + 'api/news',
           url: 'https://unidemo.dcloud.net.cn/api/news',
+				 //url: 'https://news.qq.com/zt2020/page/feiyan.htm#/',
           data: this.requestParams,
           success: (result) => {
             var endTime = new Date();

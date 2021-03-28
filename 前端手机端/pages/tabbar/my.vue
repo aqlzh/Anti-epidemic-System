@@ -1,5 +1,5 @@
 <template>
-	<view clss="container">>
+	<view clss="container">
 		<image class="bg-set" src="../../static/bj1.png"></image>
 		<view class="content"></view>
 		<uni-list>

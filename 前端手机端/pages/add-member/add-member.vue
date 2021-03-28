@@ -31,12 +31,14 @@
 			</view>
 			<view class="list">
 				<view class="list-title">来源地信息</view>
-				<view class="list-item">是否来自武汉：<button v-if="lzwh==''" type="primary" size="mini" @click="jcly(1)">是</button><button
+				
+				<!-- <view class="list-item">是否来自石家庄：<button v-if="lzwh==''" type="primary" size="mini" @click="jcly(1)">是</button><button
 					 v-if="lzwh==''" type="warn" size="mini" style="margin-left:30upx;" @click="jcly(2)">否</button><button size="mini"
 					 v-if="lzwh!=''" @click="cxly(1)">{{lzwh}}</button></view>
-				<view class="list-item">是否来自湖北：<button type="primary" v-if="lzhb==''" size="mini" @click="jcly(3)">是</button><button
+				<view class="list-item">是否来自河北：<button type="primary" v-if="lzhb==''" size="mini" @click="jcly(3)">是</button><button
 					 type="warn" v-if="lzhb==''" size="mini" style="margin-left:30upx;" @click="jcly(4)">否</button><button size="mini"
-					 v-if="lzhb!=''" @click="cxly(2)">{{lzhb}}</button></view>
+					 v-if="lzhb!=''" @click="cxly(2)">{{lzhb}}</button></view> -->
+					 
 				<view class="list-item">来源地详细地址：<input name="lydaddr" placeholder="请输入地址" /></view>
 				<view class="list-item">出行方式：<picker mode="selector" style="padding:0px;margin:0px;" range-key="lable" :range="cx"
 					 @change="cxfsChange">
@@ -95,7 +97,7 @@
 	export default {
 		data() {
 			return {
-				title: '海陵区城东街道外来人员信息登录管理系统',
+				title: '街道外来人员信息登录管理系统',
 				zj: [{
 					lable: '身份证',
 					value: '身份证'
@@ -256,14 +258,14 @@
 					this.lzhb = "否";
 				}
 			},
-			cxly: function(e) {
-				if (e == 1) {
-					this.lzwh = "";
-				}
-				if (e == 2) {
-					this.lzhb = "";
-				}
-			},
+			// cxly: function(e) {
+			// 	if (e == 1) {
+			// 		this.lzwh = "";
+			// 	}
+			// 	if (e == 2) {
+			// 		this.lzhb = "";
+			// 	}
+			// },
 			sendsj: function(e) {
 				this.senddata = [];
 				console.log(e.detail.value);
@@ -276,8 +278,8 @@
 				this.senddata['zjlx'] = this.zjlx; //证件类型
 				this.senddata['nl'] = this.xznl; //年龄
 				this.senddata['xb'] = this.xzxb; //性别
-				this.senddata['sfwh'] = this.lzwh; //是否来自武汉
-				this.senddata['sfhb'] = this.lzhb; //是否来看成湖北
+				// this.senddata['sfwh'] = this.lzwh; //是否来自武汉
+				// this.senddata['sfhb'] = this.lzhb; //是否来看成湖北
 				this.senddata['cxfs'] = this.cxfs; //出行 方式
 				this.senddata['jcrq'] = this.jcrq; //检测日期
 				this.senddata['jcsj'] = this.jcsj; //检测时间

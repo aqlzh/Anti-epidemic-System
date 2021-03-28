@@ -73,6 +73,23 @@
         "usingComponents" : true
     },
     "h5" : {
-        "template" : "template.h5.html"
+        "template" : "",
+        "domain" : "www.lzh-create.top",
+        "devServer" : {
+            "port" : "",
+            "https" : false
+        },
+        "router" : {
+            "base" : "./",
+            "mode" : "hash"
+        },
+				"publicPath":"./" ,
+				
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
+            }
+        },
+        "title" : "疫情"
     }
 }
