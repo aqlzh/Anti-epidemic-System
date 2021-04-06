@@ -12,6 +12,8 @@
 
 SpringBoot , uniapp ,Vue .MySql
 
+查看方式 github1s.com
+
 ### 初步功能设想
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/221342_318d976b_7463838.jpeg "初步功能设想.jpg")
 
