@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.css">
+
+    <style>
+        
+#login-box{
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: center;
+    background: #00000080;
+    padding: 20px 50px;
+    border-radius: 15px;
+}
+
+#login-box h1{
+    color: #ffffff;
+}
+
+#login-box .form{
+    margin-top: 50px;
+}
+
+#login-box .form i{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#login-box .form .item{
+    margin-top: 15px;
+}
+
+#login-box .form .item input{
+    width: 180px;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 2px solid #ffffff;
+    padding: 5px 10px;
+    background: #ffffff00;
+    color: #ffffff;
+}
+
+#login-box .submit{
+    margin-top: 15px;
+    width: 180px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #ddbaee 0%, #e8a8ee 33%, #b8d9f8 66%, #59bcf5 100%);
+    border-radius: 15px;
+}
+
+body {
+    /*background: url(./image/2.jpg) ;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 120% auto;*/
+    background-color: skyblue;
+    
+}
+
+#head h1 {
+    margin-left: 37%;
+    height: auto;
+    /* margin: 0 auto; */
+    margin-top: 10%;
+    color: #ffffff;
+    font-size: 40px;
+    
+}
+ 
+    </style>
+</head>
+<body>
+    <div id="head">
+        <h1>智慧校园疫情防控系统</h1>
+    </div>
+    <div id="login-box">
+        
+        <h1>Login</h1>
+        <form name="表单" action="/doLogin" method="post">
+            <div class="form">
+                <div class="item">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="text"  class="username"   name="username" placeholder="Username">
+                </div>
+                <div class="item">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password"  class="password"  name="password" placeholder="Password">
+                </div>
+            </div>
+            <input   type="submit" class="submit"  name="submit" value="提交">
+        </form>
+
+    </div>
+</body>
+</html>
+
+
+

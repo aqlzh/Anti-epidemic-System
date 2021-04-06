@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成功页面</title>
+</head>
+
+<style>
+    .box {
+        width: 30%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 10%;
+        text-align: center;
+
+        background-color: skyblue;
+
+        padding: 20px 50px
+        border-radius: 15px;
+        color: rgb(25, 233, 153);
+    }
+
+
+
+    body {
+        background: url(./image/3.jpg) ;
+        background-color: skyblue;
+
+        background-repeat: no-repeat;
+        background-size: 120% auto;
+
+    }
+</style>
+<body>
+   <div class="box">
+       <h1 align="center" id="success">欢迎来到成功页面</h1>
+       <!--<form th:action="@{/admin/queryAll}" method="get">
+           <label>
+               <button th:type="submit">返回管理员主页面</button>
+           </label>
+
+       </form>-->
+       <a href="/AdminMainPage.html">返回管理员主页面</a>
+   </div>
+</body>
+</html>
