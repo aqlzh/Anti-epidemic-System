@@ -10,7 +10,7 @@
 前后端分离开发
 ## 技术栈
 
-SpringBoot , uniapp ,Vue .MySql
+SpringBoot , uniapp ,Vue .MySql, Guns
 
 查看方式 github1s.com
 
