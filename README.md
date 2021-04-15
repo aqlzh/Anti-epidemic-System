@@ -7,7 +7,7 @@
 ## 软件架构
 
 
-前后端分离开发
+基于前后端分离开发
 ## 技术栈
 
 SpringBoot , uniapp ,Vue .MySql, Guns
