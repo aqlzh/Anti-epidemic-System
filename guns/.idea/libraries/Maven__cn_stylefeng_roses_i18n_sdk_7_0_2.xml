@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.stylefeng.roses:i18n-sdk:7.0.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/stylefeng/roses/i18n-sdk/7.0.2/i18n-sdk-7.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/stylefeng/roses/i18n-sdk/7.0.2/i18n-sdk-7.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/stylefeng/roses/i18n-sdk/7.0.2/i18n-sdk-7.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
