@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 多语言界面
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/24 19:15
  */
 @Controller
@@ -17,7 +17,7 @@ public class TranslationViewController {
     /**
      * 多语言主界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/24 19:15
      */
     @GetResource(name = "文件管理首页", path = "/view/i18n")
@@ -28,7 +28,7 @@ public class TranslationViewController {
     /**
      * 多语言新增界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/24 19:16
      */
     @GetResource(name = "多语言新增界面", path = "/view/i18n/add")
@@ -39,7 +39,7 @@ public class TranslationViewController {
     /**
      * 多语言编辑界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/24 19:16
      */
     @GetResource(name = "文件管理首页", path = "/view/i18n/edit")

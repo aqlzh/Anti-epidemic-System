@@ -24,7 +24,7 @@ public class MonitorController {
     /**
      * 系统硬件信息页面
      *
-     * @author fengshuonan
+     * .
      * @date 2018/12/24 22:43
      */
     @GetResource(name = "服务器监控", path = "/view/monitor/systemInfo")

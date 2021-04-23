@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 资源管理界面
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/8 21:59
  */
 @Controller
@@ -17,7 +17,7 @@ public class ResourceViewController {
     /**
      * 资源管理首页
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 21:59
      */
     @GetResource(name = "资源管理首页", path = "/view/resource")
@@ -28,7 +28,7 @@ public class ResourceViewController {
     /**
      * 资源管理详情
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 22:23
      */
     @GetResource(name = "资源管理详情", path = "/view/resource/detail")

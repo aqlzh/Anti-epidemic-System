@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 工作台和分析页界面渲染
  *
- * @author fengshuonan
+ * .
  * @date 2020/12/29 21:29
  */
 @Controller
@@ -17,7 +17,7 @@ public class DashboardViewController {
     /**
      * 工作台
      *
-     * @author fengshuonan
+     * .
      * @date 2018/12/24 22:43
      */
     @GetResource(name = "工作台", path = "/view/dashboard/workplace", requiredPermission = false)
@@ -28,7 +28,7 @@ public class DashboardViewController {
     /**
      * 分析页面
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/29 21:27
      */
     @GetResource(name = "分析页面", path = "/view/dashboard/analysis", requiredPermission = false)

@@ -1,7 +1,7 @@
 /**
  * 多语言相关方法的封装
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/29 21:49
  */
 layui.define(['HttpRequest'], function (exports) {

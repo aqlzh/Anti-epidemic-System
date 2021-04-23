@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 /**
  * 示例控制器
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/24 10:57
  */
 @RestController
@@ -28,7 +28,7 @@ public class DemoController {
     /**
      * 示例方法
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/24 10:59
      */
     @GetResource(name = "示例方法", path = "/json/success")
@@ -43,7 +43,7 @@ public class DemoController {
      * requiredEncryption = true
      * </p>
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/24 10:59
      */
     @PostResource(name = "示例加密方法", path = "/encode", requiredPermission = false, requiredLogin = false, requiredEncryption = true)

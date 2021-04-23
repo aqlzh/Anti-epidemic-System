@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 /**
  * 错误页面的跳转
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/1 21:20
  */
 @Controller
@@ -18,7 +18,7 @@ public class ErrorViewController {
     /**
      * 跳转到session超时页面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/1 21:21
      */
     @GetResource(name = "跳转到session超时页面", path = "/view/global/sessionError", requiredPermission = false, requiredLogin = false)

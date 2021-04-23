@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 /**
  * 通用树选择器界面的请求参数
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/6 20:20
  */
 @Data

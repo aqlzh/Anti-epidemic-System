@@ -1,6 +1,6 @@
 /**
  * http请求对ajax封装，减少一些重复业务逻辑的编写
- * @author fengshuonan
+ * .
  */
 layui.define(['jquery'], function (exports) {
     var $ = layui.$;

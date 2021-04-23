@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 /**
  * 角色管理界面
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/8 20:55
  */
 @Controller
@@ -17,7 +17,7 @@ public class RoleViewController {
     /**
      * 角色管理首页
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 20:55
      */
     @GetResource(name = "应用管理首页", path = "/view/role")
@@ -28,7 +28,7 @@ public class RoleViewController {
     /**
      * 新增角色界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 20:57
      */
     @GetResource(name = "新增角色界面", path = "/view/role/add")
@@ -39,7 +39,7 @@ public class RoleViewController {
     /**
      * 编辑角色界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 20:57
      */
     @GetResource(name = "编辑角色界面", path = "/view/role/edit")
@@ -50,7 +50,7 @@ public class RoleViewController {
     /**
      * 修改数据范围界面
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/8 20:57
      */
     @GetResource(name = "修改数据范围界面", path = "/view/role/editDataScope")

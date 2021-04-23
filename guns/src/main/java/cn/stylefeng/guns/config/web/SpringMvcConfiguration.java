@@ -19,7 +19,7 @@ import javax.annotation.Resource;
 /**
  * spring mvc的配置
  *
- * @author fengshuonan
+ * .
  * @date 2020/4/11 10:23
  */
 @Configuration
@@ -35,7 +35,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     /**
      * 重写系统的默认错误提示
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/16 15:36
      */
     @Bean
@@ -46,7 +46,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     /**
      * 默认错误页面，返回json
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/16 15:47
      */
     @Bean("error")
@@ -60,7 +60,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     /**
      * json自定义序列化工具,long转string
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/13 17:16
      */
     @Bean
@@ -71,7 +71,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     /**
      * 配置项目拦截器
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/18 9:43
      */
     @Override
@@ -83,7 +83,7 @@ public class SpringMvcConfiguration implements WebMvcConfigurer {
     /**
      * 静态资源映射
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/16 21:45
      */
     @Override

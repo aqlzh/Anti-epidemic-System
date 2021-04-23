@@ -12,7 +12,7 @@ import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 /**
  * beetl拓展配置,绑定一些工具类,方便在模板中直接调用
  *
- * @author fengshuonan
+ * .
  * @date 2020/12/27 11:18
  */
 public class CustomBeetlGroupUtilConfiguration extends BeetlGroupUtilConfiguration {

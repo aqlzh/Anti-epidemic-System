@@ -16,7 +16,7 @@ import java.net.URLDecoder;
 /**
  * 通用界面
  *
- * @author fengshuonan
+ * .
  * @date 2021/1/6 20:18
  */
 @Controller
@@ -27,7 +27,7 @@ public class CommonViewController {
     /**
      * 通用的树列表选择器
      *
-     * @author fengshuonan
+     * .
      * @date 2021/1/6 20:19
      */
     @GetResource(name = "通用的树列表选择器", path = "/view/common/tree")

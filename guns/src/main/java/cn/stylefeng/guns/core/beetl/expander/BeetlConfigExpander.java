@@ -6,7 +6,7 @@ import cn.stylefeng.roses.kernel.config.api.context.ConfigContext;
 /**
  * Beetl模板引擎相关配置
  *
- * @author fengshuonan
+ * .
  * @date 2020/12/27 11:36
  */
 public class BeetlConfigExpander {
@@ -14,7 +14,7 @@ public class BeetlConfigExpander {
     /**
      * 边界符开始符号
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:27
      */
     public static String getDelimiterStatementStart() {
@@ -24,7 +24,7 @@ public class BeetlConfigExpander {
     /**
      * beetl边界符的结束符号
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:27
      */
     public static String getDelimiterStatementEnd() {
@@ -34,7 +34,7 @@ public class BeetlConfigExpander {
     /**
      * 自定义标签文件Root目录
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:27
      */
     public static String getResourceTagRoot() {
@@ -44,7 +44,7 @@ public class BeetlConfigExpander {
     /**
      * 自定义标签文件后缀
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:27
      */
     public static String getResourceTagSuffix() {
@@ -54,7 +54,7 @@ public class BeetlConfigExpander {
     /**
      * 是否检测文件变化,开发用true合适，但线上要改为false
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:27
      */
     public static String getResourceAutoCheck() {

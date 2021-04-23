@@ -3,7 +3,7 @@ package cn.stylefeng.guns.core.beetl.consts;
 /**
  * beetl模板引擎的常量
  *
- * @author fengshuonan
+ * .
  * @date 2020/12/27 12:20
  */
 public interface BeetlConstants {

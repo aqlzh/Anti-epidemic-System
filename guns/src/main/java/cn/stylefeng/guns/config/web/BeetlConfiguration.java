@@ -15,7 +15,7 @@ import java.util.Properties;
 /**
  * Beetl模板引擎的配置
  *
- * @author fengshuonan
+ * .
  * @date 2020/12/27 12:34
  */
 @Configuration
@@ -27,7 +27,7 @@ public class BeetlConfiguration {
     /**
      * Beetl的自定义配置
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:34
      */
     @Bean(initMethod = "init")
@@ -46,7 +46,7 @@ public class BeetlConfiguration {
     /**
      * beetl的视图解析器
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:34
      */
     @Bean
@@ -61,7 +61,7 @@ public class BeetlConfiguration {
     /**
      * 组装beetl初始化需要的properties
      *
-     * @author fengshuonan
+     * .
      * @date 2020/12/27 12:33
      */
     private Properties createBeetlProperties() {
