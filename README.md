@@ -2,7 +2,7 @@
 # Anti-epidemic System
 
 ## 介绍
-疫情防控系统 (PC 手机端)
+疫情防控系统 (PC 手机端) 多端
 
 ## 软件架构
 
