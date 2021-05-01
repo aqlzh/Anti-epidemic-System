@@ -162,7 +162,7 @@
                 type: "value"
             }],
             series: [{
-                name: "金额",
+                name: "数量",
                 type: "line",
                 smooth: !0,
                 itemStyle: {
@@ -200,7 +200,7 @@
             },
             series: [
                 {
-                    name: '券核效率',
+                    name: '效率',
                     type: 'gauge',
                     detail: {formatter: '{value}%'},
                     data: [{value: 95, name: '消毒覆盖率'}]
@@ -213,7 +213,7 @@
         var myCharts3 = echarts.init(document.getElementById('xse'), myEchartsTheme);
         var option3 = {
             title: {
-                text: '销售趋势',
+                text: '存储量',
                 textStyle: {
                     color: '#000',
                     fontSize: 14
@@ -242,7 +242,7 @@
         var myCharts4 = echarts.init(document.getElementById('fwl'), myEchartsTheme);
         var option4 = {
             title: {
-                text: '访问量趋势',
+                text: '存储量',
                 textStyle: {
                     color: '#000',
                     fontSize: 14

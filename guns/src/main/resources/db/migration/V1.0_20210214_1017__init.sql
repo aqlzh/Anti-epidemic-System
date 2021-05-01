@@ -139,7 +139,7 @@ INSERT INTO `sys_config` VALUES (15, 'beetl自动检查资源', 'RESOURCE_AUTO_C
 INSERT INTO `sys_config` VALUES (21, '系统发布版本', 'SYS_RELEASE_VERSION', '20210101', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
 INSERT INTO `sys_config` VALUES (22, '多租户开关', 'SYS_TENANT_OPEN', 'false', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
 INSERT INTO `sys_config` VALUES (23, '验证码开关', 'SYS_CAPTCHA_OPEN', 'false', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
-INSERT INTO `sys_config` VALUES (24, '系统名称', 'SYS_SYSTEM_NAME', 'Guns快速开发平台', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
+INSERT INTO `sys_config` VALUES (24, '系统名称', 'SYS_SYSTEM_NAME', '疫情系统', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
 INSERT INTO `sys_config` VALUES (25, 'Beetl默认边界符开始', 'DELIMITER_STATEMENT_START', '@', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
 INSERT INTO `sys_config` VALUES (26, 'Beetl边界符的结束', 'DELIMITER_STATEMENT_END', 'null', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
 INSERT INTO `sys_config` VALUES (27, '自定义标签文件Root目录', 'RESOURCE_TAG_ROOT', 'common/tags', 'Y', NULL, 1, 'sys_config', 'N', NULL, NULL, NULL, NULL);
