@@ -2,7 +2,7 @@
 # Anti-epidemic System
 
 ## 介绍
-疫情防控系统 (PC 手机端)
+疫情防控系统 (PC 手机端) 多端  结项21.4.30
 
 ## 软件架构
 
@@ -23,7 +23,7 @@ SpringBoot , uniapp ,Vue .MySql, Guns
 
 
 
-### PC 端 疫情题库
+### PC 端 疫情题库部分
 
 #### 刷题模块一
 
