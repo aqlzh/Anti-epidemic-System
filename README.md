@@ -28,11 +28,18 @@
 
 ### 前端
 
- Vue开源框架技术 , uniapp 前端开源技术,Apache ECharts基于JavaScript的开源可视化图表库、Jqyery 技术
+- Vue开源框架技术 , uniapp 前端开源技术
+- Apache ECharts基于JavaScript的开源可视化图表库
+- Jqyery 技术
 
 ### 后端
 
- MySql开源数据库, Flyway开源数据库控制器，Stylefeng开源技术，SpringBoot开源框架技术，JWT 技术以及Redis 开源技术，Apache Shiro开源Java安全技术，beetl 开源模板引擎，Apache Maven 项目管理开源技术
+- MySql开源数据库, Flyway开源数据库控制器
+- Stylefeng开源技术，SpringBoot开源框架技术
+- JWT 技术以及Redis 开源技术
+- Apache Shiro开源Java安全技术
+- beetl  与 Thymeleaf 开源模板引擎
+- Apache Maven 项目管理开源技术
 
 ### 项目功能图（V 1.0）
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/221342_318d976b_7463838.jpeg "初步功能设想.jpg")
