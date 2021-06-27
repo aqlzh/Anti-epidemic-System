@@ -22,7 +22,7 @@
 
 ## 技术栈
 
-- 查看方式 github1s.com（以 WEB IDE的形式展示）
+- 查看方式 github1s.com（以 WEB IDE的形式进行展示）
 
 ### 前端
 
