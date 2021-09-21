@@ -34,7 +34,7 @@
 
 - MySql开源数据库, Flyway开源数据库控制器技术
 - Stylefeng开源技术，SpringBoot开源框架技术
-- JWT 技术以及Redis 开源技术
+- JWT 技术以及基于Redis 开源技术
 - Apache Shiro开源Java安全开源技术
 - beetl  与 Thymeleaf 开源模板引擎
 - Apache Maven 项目管理开源技术
