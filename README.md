@@ -1,4 +1,3 @@
-
 # Anti-epidemic System
 
 ## 介绍
