@@ -27,7 +27,7 @@
 
 - Vue开源框架技术 , 基于uniapp 前端开源技术
 - Apache ECharts基于JavaScript的开源可视化图表库的技术
-- Jquery 技术等
+- Jquery技术等
 
 ### 后端
 
