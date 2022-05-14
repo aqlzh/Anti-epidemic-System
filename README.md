@@ -1,105 +1,112 @@
-
 # Anti-epidemic System
 
 ## 介绍
-智慧校园疫情防控系统——PC 手机端 多端并行  
+智慧校园疫情防控系统（平台）—— 电脑端与手机端的多端并行的系统架构系统项目  
 
-:zap: ​项目门户网站链接​ :zap:
+:zap: ​本项目门户网站链接​ :zap:
 
 [项目链接](http://door.lzh-create.top/)
 
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210246_e424b70f_7463838.jpeg "门户网站.jpg")
 
+## 软件架构 :wave:
 
-
-
-## 软件架构
-
-- 手机端信息系统——日常健康信息填报系统（前端手机端 文件夹）
-- 电脑端智疫图 —— 数据可视化界面 （Echarts_PC 文件夹）
-- 电脑 / 手机 端管理系统 ——管理信息后台系统 （guns 文件夹）
-- 后端电脑端 —— 结合新技术 测试开发界面系统 （后端手机端 文件夹）
-- 疫情题库 —— 学习与刷题系统（疫情题库 文件夹）
-- 运维 —— 部署项目与运维 （运维 文件夹）
-- 门户网站 —— 项目门户指引网站 （door 文件夹）
+- 手机端信息系统——日常健康信息填报系统（在前端手机端 文件夹内）
+- 电脑端智疫图 —— 数据可视化界面 （在Echarts_PC 文件夹内）
+- 电脑 / 手机 端管理系统 ——管理信息后台系统 （在guns 文件夹内）
+- 后端电脑端 —— 结合新技术 测试开发界面系统 （后端手机端 文件夹内）
+- 疫情题库 —— 学习与刷题系统（疫情题库 文件夹内）
+- 运维 —— 部署项目与运维 （在运维 文件夹内）
+- 门户网站 —— 项目门户指引网站 （在door 文件夹内）
 
 ## 技术栈
 
-- 查看方式 github1s.com
+- 查看方式 github1s.com（以 WEB IDE的形式进行展示）
 
 ### 前端
 
-- Vue开源框架技术 , uniapp 前端开源技术
-- Apache ECharts基于JavaScript的开源可视化图表库
-- Jqyery 技术
+- Vue开源框架技术 , 基于uniapp 前端开源技术
+- Apache ECharts基于JavaScript的开源可视化图表库的技术
+- Jquery技术等
 
 ### 后端
 
-- MySql开源数据库, Flyway开源数据库控制器
+- MySql开源数据库, Flyway开源数据库控制器技术
 - Stylefeng开源技术，SpringBoot开源框架技术
-- JWT 技术以及Redis 开源技术
-- Apache Shiro开源Java安全技术
+- JWT 技术以及基于Redis 开源技术
+- Apache Shiro开源Java安全开源技术
 - beetl  与 Thymeleaf 开源模板引擎
 - Apache Maven 项目管理开源技术
 
 ### 项目功能图（V 1.0）
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/221342_318d976b_7463838.jpeg "初步功能设想.jpg")
 
-### PC端数据可视化
+### 电脑端智疫图
+
+智疫图 —— 数据可视化
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0212/220820_ee7193e0_7463838.jpeg "LZH_create.jpg")
 
 
+### 电脑端 疫情题库
 
-### PC 端 疫情题库部分
+#### 系统入口
 
-#### 刷题模块一
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210650_ebed5270_7463838.jpeg "疫情题库入口.jpg")
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/220303_68453620_7463838.png "图片.png")
+#### 刷题库主页
 
-#### 刷题模块二
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210718_bc5b202e_7463838.jpeg "题库主页.jpg")
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/221014_6f8a702a_7463838.png "Snipaste_2021-02-22_22-06-04.png")
-
-#### 数据库 物理模型
+#### 题库 数据库ER图
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/220935_109428fd_7463838.png "Snipaste_2021-02-22_22-05-25.png")
 
-#### 题库导出
+#### 题库刷题界面
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0222/221047_da1e00dd_7463838.png "Snipaste_2021-02-22_22-06-22.png")
-
-### 移动端界面
-
-#### 信息列表界面
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/231859_fe08bb89_7463838.png "1.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210824_7c25b77c_7463838.jpeg "题库刷题.jpg")
 
 
-#### 搜索界面
+### 电脑端 管理界面
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/231935_11a5cdb3_7463838.png "2.png")
+- 此部分已适配手机端
+
+#### 电脑端入口
+ 
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/212644_47c7ad2a_7463838.jpeg "管理入口.jpg")
+
+#### 管理界面主页
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/212800_d7366e99_7463838.jpeg "管理图1.jpg")
+
+#### 分析界面
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/212837_1acfdd36_7463838.jpeg "分析页.jpg") 
+
+#### 用户管理界面
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/212858_ae13f50d_7463838.jpeg "用户管理.jpg")
+
+### 手机端信息系统
+
+#### 登入系统界面
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210900_30861f89_7463838.jpeg "手机端3.jpg")
+
+
+#### 系统主页界面
+
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210929_71112a35_7463838.jpeg "手机端4.jpg")
 
 #### 新闻界面 
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/232011_7df67944_7463838.png "3.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/210946_e5295d10_7463838.jpeg "手机端2.jpg")
 
 
-#### 疫情信息上报界面
+#### 信息填写界面
 
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/232046_fc1ab96f_7463838.png "4.png")
-
-
-#### 我的界面
-
-![输入图片说明](https://images.gitee.com/uploads/images/2021/0215/232102_856dfbe8_7463838.png "5.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0501/211011_34ee9066_7463838.jpeg "手机端1.jpg")
 
 
-
-### PC 端信息提交界面
-
-
-
-
-
-结项21.4.30
+:rose: 项目结项时间21.4.30  :rose:
 
